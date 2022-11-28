@@ -1,0 +1,32 @@
+.wrapper {
+  max-width: 70rem; /*equivalente a 70 x 16px = 1120px*/
+  margin: 2rem auto;
+  padding: 0 1rem; /*quando a tela diminui a, o conteudo não ficará colado*/
+
+  display: grid;
+  grid-template-columns: 256px 1fr; /* 1º coluna permanece com tamanho fixo; A 2º permanece com um tamanho flexivel*/
+  gap: 2rem; /*Espaçamento entre as duas colunas de 16px*/
+  align-items: flex-start; /*Permanece */
+}
+
+/*aplicando reponsividade para dispositivo mobile*/
+@media (max-width: 768px) {
+  html {
+    /*
+    Como não podemos deixar "14px" fixo, para não quebrar a responsividade e as alterações de tamanho
+    de fontes pelo usuário. Utilizarems o tamanho em percentual. 
+    
+    Sendo assim realizamos um regra de três pegando o nosso valor padrão de "16px":
+      16 => 100%
+      14 => x
+
+      (14 * 100) / 16 = 87.5
+
+    */
+    font-size: 87.5%;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
