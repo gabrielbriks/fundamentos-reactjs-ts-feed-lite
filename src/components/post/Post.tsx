@@ -19,11 +19,12 @@ interface Author {
 }
 
 interface Content {
-  type: 'paragraph' | 'link';
+  type: 'paragraph' | 'link' | string;
   content: string;
 }
 
-interface PostProps {
+export interface PostProps {
+  id?: number;
   author: Author;
   publishedAt: Date;
   content: Content[];

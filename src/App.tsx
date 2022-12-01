@@ -14,14 +14,14 @@ const posts = [
   {
     id: 1,
     author: {
-      avatarUrl: "https://github.com/gabrielbriks.png", 
-      name: "Gabriel Morais", 
-      role: "CEO CodeRivers" 
+      avatarUrl: "https://github.com/gabrielbriks.png",
+      name: "Gabriel Morais",
+      role: "CEO CodeRivers"
     },
     content: [
-      {type: 'paragraph', content: 'Fala galera! 👋 '},
-      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifolio. É um projeto pessoal que fiz com ReactJS'},
-      {type: 'link', content: 'gabriel.design/projeto-react'},
+      { type: 'paragraph', content: 'Fala galera! 👋 ' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifolio. É um projeto pessoal que fiz com ReactJS' },
+      { type: 'link', content: 'gabriel.design/projeto-react' },
     ],
     publishedAt: new Date('2022-11-21 20:00:00'),
 
@@ -31,14 +31,14 @@ const posts = [
   {
     id: 2,
     author: {
-      avatarUrl: "https://github.com/diego3g.png", 
-      name: "Diego Fernandes", 
-      role: "CTO @ Rocketseat" 
+      avatarUrl: "https://github.com/diego3g.png",
+      name: "Diego Fernandes",
+      role: "CTO @ Rocketseat"
     },
     content: [
-      {type: 'paragraph', content: 'Fala galera! 👋 '},
-      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifolio. É um projeto pessoal que fiz com ReactJS'},
-      {type: 'link', content: 'gabriel.design/projeto-react'},
+      { type: 'paragraph', content: 'Fala galera! 👋 ' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifolio. É um projeto pessoal que fiz com ReactJS' },
+      { type: 'link', content: 'gabriel.design/projeto-react' },
     ],
     publishedAt: new Date('2022-11-19 20:00:00'),
 
@@ -59,12 +59,12 @@ function App() {
         <aside>
           <Sidebar />
         </aside>
-        
+
         <main>
-         {posts.map(post => {
+          {posts.map(post => {
             return (
-              <Post 
-                key={post.id} 
+              <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
@@ -72,10 +72,10 @@ function App() {
             )
           })}
         </main>
-        
+
 
       </div>
-      
+
     </div>
   )
 }
